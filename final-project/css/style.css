@@ -9,7 +9,7 @@
 @font-face {
     font-family: myFont;
     /* set name */
-    src: url(assets/DkCrayonCrumble-ddll.woff);
+    src: url(/assets/DkCrayonCrumble-ddll.woff);
     /* url of the font */
 }
 
