@@ -8,14 +8,14 @@
 /* Creates custom font */
 @font-face {
     font-family: myFont;
-    src: url(/assets/DkCrayonCrumble-ddll.woff);
+    src: url(assets/DkCrayonCrumble-ddll.woff);
 }
 
 /* Creates custom border */
 .shakey-border {
     /* thickness of border */
     border: 50px solid transparent;
-    border-image: url('/assets/shakeyborder.png') 23% stretch;
+    border-image: url('assets/shakeyborder.png') 23% stretch;
 }
 
 /* Page layout & where the files sit */
