@@ -15,7 +15,7 @@
 .shakey-border {
     /* thickness of border */
     border: 50px solid transparent;
-    border-image: url('./assets/shakeyborder.png') 23% stretch;
+    border-image: url('/index.html/assets/shakeyborder.png') 23% stretch;
 }
 
 /* Page layout & where the files sit */
