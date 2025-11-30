@@ -8,14 +8,14 @@
 /* Creates custom font */
 @font-face {
     font-family: myFont;
-    src: url(/assets/DkCrayonCrumble-ddll.woff);
+    src: url(assets/DkCrayonCrumble-ddll.woff);
 }
 
 /* Creates custom border */
 .shakey-border {
     /* thickness of border */
     border: 50px solid transparent;
-    border-image: url('/assets/shakeyborder.png') 23% stretch;
+    border-image: url('assets/shakeyborder.png') 23% stretch;
 }
 
 /* Page layout & where the files sit */
@@ -80,7 +80,7 @@ body {
     border-radius: 1px;
     margin: 2rem 0;
     border: 15px solid transparent;
-    border-image: url('/assets/shakeyborder.png') 7% round;
+    border-image: url('assets/shakeyborder.png') 7% round;
 }
 
 /* Drawer handle */
@@ -92,7 +92,7 @@ body {
     cursor: pointer;
     margin: 2rem 0;
     border: 10px solid transparent;
-    border-image: url('/assets/shakeyborder.png') 4% round;
+    border-image: url('assets/shakeyborder.png') 4% round;
 }
 
 /* Contains all stacked files */
@@ -141,7 +141,7 @@ body {
     height: -1%;
     background: #fff;
     border: 37px solid transparent;
-    border-image: url('/assets/shakeyborder.png') 18% round;
+    border-image: url('assets/shakeyborder.png') 18% round;
     border-bottom: none;
 }
 
