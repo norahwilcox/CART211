@@ -8,7 +8,7 @@
 /* Creates custom font */
 @font-face {
     font-family: myFont;
-    src: url(assets/DkCrayonCrumble-ddll.woff);
+    src: url(Assets/DkCrayonCrumble-ddll.woff);
 }
 
 /* Creates custom border */
