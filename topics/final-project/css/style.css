@@ -5,21 +5,20 @@
     font-family: myFont;
 }
 
-
+/* Creates custom font */
 @font-face {
     font-family: myFont;
-    /* set name */
     src: url(/assets/DkCrayonCrumble-ddll.woff);
-    /* url of the font */
 }
 
+/* Creates custom border */
 .shakey-border {
-    border: 50px solid transparent;
     /* thickness of border */
+    border: 50px solid transparent;
     border-image: url('/assets/shakeyborder.png') 23% stretch;
-    /* or "round" instead of stretch if you want tiling */
 }
 
+/* Page layout & where the files sit */
 body {
     height: 100vh;
     display: flex;
@@ -30,6 +29,7 @@ body {
     font-family: sans-serif;
 }
 
+/* Cabinet interior */
 .cabinet {
     position: absolute;
     bottom: 46vh;
@@ -42,10 +42,12 @@ body {
     align-items: flex-end;
 }
 
+/* Adds custom border to cabinet */
 .cabinet.shakey-border {
     border-width: 50px;
 }
 
+/* Drawer face that moves up/down */
 .drawer-front {
     position: absolute;
     bottom: 10px;
@@ -60,10 +62,12 @@ body {
     align-items: center;
 }
 
+/* Adds custom border to drawer front */
 .drawer-front.shakey-border{
     border-width: 50px;
 }
 
+/* Title on the drawer front */
 .drawer-title {
     font-size: 2rem;
     text-align: center;
@@ -76,10 +80,10 @@ body {
     border-radius: 1px;
     margin: 2rem 0;
     border: 15px solid transparent;
-        /* thickness of shaky border */
-        border-image: url('/assets/shakeyborder.png') 7% round;
+    border-image: url('/assets/shakeyborder.png') 7% round;
 }
 
+/* Drawer handle */
 .handle {
     width: 25%;
     max-width: 200px;
@@ -88,11 +92,10 @@ body {
     cursor: pointer;
     margin: 2rem 0;
     border: 10px solid transparent;
-        /* thickness of shaky border */
-        border-image: url('/assets/shakeyborder.png') 4% round;
-        /* your SVG/PNG */
+    border-image: url('/assets/shakeyborder.png') 4% round;
 }
 
+/* Contains all stacked files */
 .files {
     position: relative;
     transition: transform 0.2s ease, z-index 0.1s ease;
@@ -105,12 +108,12 @@ body {
     z-index: 1;
 }
 
-/* Stack the files with overlap */
+/* Stack the files with overlap, all except the front one */
 .file:not(:last-child) {
     margin-bottom: -47.2vh;
-    /* Use relative height for overlap */
 }
 
+/* Main file display */
 .file {
     position: absolute;
     transition: transform 0.2s ease, z-index 0.1s ease;
@@ -123,11 +126,12 @@ body {
     transition: transform 0.12s ease;
 }
 
+/* Adds custom border to the files */
 .file.shakey-border {
     border-width: 50px;
-    /* adjust thickness */
 }
 
+/* Creates the file tabs */
 .file::before {
     content: '';
     position: absolute;
@@ -137,9 +141,7 @@ body {
     height: -1%;
     background: #fff;
     border: 37px solid transparent;
-        /* thickness of shaky border */
-        border-image: url('/assets/shakeyborder.png') 18% round;
-        /* your SVG/PNG */
+    border-image: url('/assets/shakeyborder.png') 18% round;
     border-bottom: none;
 }
 
@@ -171,6 +173,7 @@ body {
     z-index: 0;
 }
 
+/* Adjusts the placement of the dates to match the tabs */
 .file:nth-child(3n + 1) .file-date {
     left: 0%;
     width: 20%;
@@ -187,36 +190,28 @@ body {
     width: 20%;
 }
 
+/* Left-side image area on each file */
 .file-image {
     float: left;
-    /* image on the left */
     width: 60%;
-    /* space it takes in the file */
     box-sizing: border-box;
 }
 
+/* Resize and display image */
 .file-image img {
     width: 100%;
-    /* fill width of container */
     height: auto;
-    /* maintain aspect ratio */
     object-fit: contain;
-    /* ensures the whole image fits without cropping */
     display: block;
     max-height: 100%;
-    /* ensures vertical images don’t overflow container */
 }
 
+/* Right-side text caption on each file */
 .file-caption {
     width: 40%;
     font-size: 1.4rem;
-    /* remaining space */
     display: flex;
     justify-content: center;
-    /* horizontal center */
     align-items: center;
-    /* vertical center */
     text-align: center;
-    /* text centered inside caption */
 }
-
