@@ -120,8 +120,8 @@ handle.addEventListener('click', e => {
 
     // Moves drawer up and increase height
     drawerFront.style.transition = 'transform 0.5s ease, height 0.18s ease'; // length of transition
-    drawerFront.style.transform = 'translateY(-58%)';
-    drawerFront.style.height = '55vh'; // increases height of drawer when closed
+    drawerFront.style.transform = 'translateY(-62%)';
+    drawerFront.style.height = '56vh'; // increases height of drawer when closed
 
     stacked = true;
 

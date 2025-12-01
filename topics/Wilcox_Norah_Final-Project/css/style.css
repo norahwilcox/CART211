@@ -35,7 +35,7 @@ body {
     bottom: 46vh;
     width: 78vw;
     max-width: 85vh;
-    height: 47vh;
+    height: 45vh;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -102,8 +102,7 @@ body {
     transition: transform 0.2s ease, z-index 0.1s ease;
     width: 75vw;
     max-width: 80vh;
-    max-height: 81vh;
-    display: flex;
+    max-height: 76vh;
     flex-direction: column;
     align-items: center;
     z-index: 1;
@@ -119,13 +118,13 @@ body {
     position: relative;
     transition: transform 0.2s ease, z-index 0.1s ease;
     display: flex;
-    height: 49.3vh;
+    height: 49.4vh;
     width: 75vw;
     max-width: 80vh;
     background: #fff;
     cursor: pointer;
     transition: transform 0.12s ease;
-    bottom: 8vh
+    bottom: 10vh
 }
 
 /* Adds custom border to the files */
@@ -171,21 +170,12 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: center;
     white-space: normal;
-    /* allow wrapping */
     max-width: 100%;
-    /* limit width inside tab */
-    line-height: -1rem;
-    transform: translate(0%, -100%);
-}
-
-@media (max-width: 500px) {
-    .file-date {
-        font-size: 1rem;
-        max-width: 60%;
-    }
+    line-height: 1.4rem;
+    transform: translate(0%, -150%);
 }
 
 /* Adjusts the placement of the dates to match the tabs */
@@ -228,4 +218,143 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+/* Phone display */
+@media (max-width: 500px),
+(max-height: 800px) {
+
+    /* Body padding smaller */
+    body {
+        padding-bottom: 1vh;
+    }
+
+    /* Cabinet */
+    .cabinet {
+        bottom: 35vh;
+        width: 90vw;
+        max-width: 90vw;
+        height: 40vh;
+    }
+
+    .cabinet.shakey-border {
+        border-width: 2rem;
+    }
+
+    /* Drawer front */
+    .drawer-front {
+        bottom: 2vh;
+        width: 90%;
+        max-width: 90vw;
+        height: 42vh;
+    }
+
+    .drawer-front.shakey-border {
+        border-width: 2rem;
+    }
+
+    /* Drawer title */
+    .drawer-title {
+        font-size: 1.4rem;
+        width: 70%;
+        height: 4rem;
+        margin: 1rem;
+        border-width: 0.7rem;
+    }
+
+    /* Drawer handle */
+    .handle {
+        width: 15vw;
+        height: 0.8vh;
+        margin: 1rem 0;
+        border-width: 0.4rem;
+    }
+
+    /* Files container */
+    .files {
+        width: 85vw;
+        max-width: 85vw;
+        max-height: 70vh;
+    }
+
+    /* File main container */
+    .file {
+        width: 85vw;
+        max-width: 85vw;
+        height: 45vh;
+        bottom: 7vh;
+    }
+
+    .file.shakey-border {
+        border-width: 2rem;
+    }
+
+    /* Tabs */
+    .file::before {
+        width: 10%;
+        max-width: 10%;
+        transform: translateY(-150%);
+        border-width: 2rem;
+    }
+
+    .file:nth-child(3n + 1)::before {
+        left: 10%;
+    }
+
+    .file:nth-child(3n + 2)::before {
+        left: 75%;
+        transform: translateX(-50%) translateY(-150%);
+    }
+
+    .file:nth-child(3n + 3)::before {
+        left: 0%;
+    }
+
+    /* Dates inside tabs */
+    .file-date {
+        font-size: 0.9rem;
+        max-width: 50%;
+        line-height: 1.2rem;
+        transform: translate(-50%, -120%);
+    }
+
+    .file:nth-child(3n + 1) .file-date {
+        left: 12%;
+        max-width: 50%;
+    }
+
+    .file:nth-child(3n + 2) .file-date {
+        left: 50%;
+        max-width: 50%;
+    }
+
+    .file:nth-child(3n + 3) .file-date {
+        left: 12%;
+        max-width: 50%;
+    }
+
+    /* Images inside files */
+    .file-image {
+        width: 55%;
+    }
+
+    .file-image img {
+        max-height: 90%;
+    }
+
+    /* Captions */
+    .file-caption {
+        width: 45%;
+        font-size: 1rem;
+    }
+
+    /* Titles and drawer handle smaller */
+    .drawer-title {
+        font-size: 1.5rem;
+    }
+
+    .handle {
+        height: 0.7vh;
+        width: 12vw;
+    }
 }
