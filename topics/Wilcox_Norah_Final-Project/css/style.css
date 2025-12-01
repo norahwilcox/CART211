@@ -175,7 +175,7 @@ body {
 
 /* Adjusts the placement of the dates to match the tabs */
 .file:nth-child(3n + 1) .file-date {
-    left: 0%;
+    left: 1%;
     width: 20%;
 }
 
