@@ -231,10 +231,11 @@ body {
 
     /* Cabinet */
     .cabinet {
-        bottom: 35vh;
+        bottom: 40vh;
         width: 90vw;
         max-width: 90vw;
         height: 40vh;
+        max-height: 40vh;
     }
 
     .cabinet.shakey-border {
@@ -243,7 +244,7 @@ body {
 
     /* Drawer front */
     .drawer-front {
-        bottom: 2vh;
+        bottom: 6vh;
         width: 90%;
         max-width: 90vw;
         height: 42vh;
@@ -259,7 +260,7 @@ body {
         width: 70%;
         height: 4rem;
         margin: 1rem;
-        border-width: 0.7rem;
+        border-width: 0.8rem;
     }
 
     /* Drawer handle */
