@@ -14,7 +14,7 @@
 /* Creates custom border */
 .shakey-border {
     /* thickness of border */
-    border: 50px solid transparent;
+    border: 3rem solid transparent;
     border-image: url('../assets/shakeyborder.png') 23% stretch;
 }
 
@@ -33,29 +33,29 @@ body {
 .cabinet {
     position: absolute;
     bottom: 46vh;
-    width: 80vw;
-    max-width: 700px;
+    width: 78vw;
+    max-width: 85vh;
     height: 47vh;
     background: #fff;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex;
 }
 
 /* Adds custom border to cabinet */
 .cabinet.shakey-border {
-    border-width: 50px;
+    border-width: 3.3rem;
 }
 
 /* Drawer face that moves up/down */
 .drawer-front {
     position: absolute;
-    bottom: 10px;
-    width: 80%;
-    max-width: 710px;
+    bottom: 4vh;
+    width: 81%;
+    max-width: 88vh;
     height: 46vh;
     background: #fff;
-    z-index: 1;
+    z-index: 2;
     pointer-events: auto;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ body {
 
 /* Adds custom border to drawer front */
 .drawer-front.shakey-border{
-    border-width: 50px;
+    border-width: 3.3rem;
 }
 
 /* Title on the drawer front */
@@ -77,21 +77,22 @@ body {
     justify-content: center;
     align-items: center;
     background: #fff;
-    border-radius: 1px;
-    margin: 2rem 0;
-    border: 15px solid transparent;
+    border-radius: 5%;
+    margin: 2rem;
+    border: 1rem solid transparent;
     border-image: url('../assets/shakeyborder.png') 7% round;
 }
 
 /* Drawer handle */
 .handle {
-    width: 25%;
-    max-width: 200px;
-    height: 0.5rem;
+    position: relative;
+    width: 10vw;
+    max-width: 10vw;
+    height: 1vh;
     background: #ffffff;
     cursor: pointer;
     margin: 2rem 0;
-    border: 10px solid transparent;
+    border: 0.6rem solid transparent;
     border-image: url('../assets/shakeyborder.png') 4% round;
 }
 
@@ -99,9 +100,9 @@ body {
 .files {
     position: relative;
     transition: transform 0.2s ease, z-index 0.1s ease;
-    bottom: 10;
-    width: 80%;
-    max-width: 700px;
+    width: 75vw;
+    max-width: 80vh;
+    max-height: 81vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,37 +111,40 @@ body {
 
 /* Stack the files with overlap, all except the front one */
 .file:not(:last-child) {
-    margin-bottom: -47.2vh;
+    margin-bottom: -47vh;
 }
 
 /* Main file display */
 .file {
-    position: absolute;
+    position: relative;
     transition: transform 0.2s ease, z-index 0.1s ease;
     display: flex;
-    width: 95%;
-    height: 50vh;
+    height: 49.3vh;
+    width: 75vw;
+    max-width: 80vh;
     background: #fff;
     cursor: pointer;
-    position: relative;
     transition: transform 0.12s ease;
+    bottom: 8vh
 }
 
 /* Adds custom border to the files */
 .file.shakey-border {
-    border-width: 50px;
+    border-width: 3.3rem;
 }
 
 /* Creates the file tabs */
 .file::before {
     content: '';
     position: absolute;
-    top: -25.3%;
+    top: 0;
     left: 10%;
-    width: 10%;
-    height: -1%;
+    transform: translateY(-210%);
+    width: 8%;
+    max-width: 8%;
+    height: auto;
     background: #fff;
-    border: 37px solid transparent;
+    border: 2.5rem solid transparent;
     border-image: url('../assets/shakeyborder.png') 18% round;
     border-bottom: none;
 }
@@ -148,46 +152,56 @@ body {
 
 /* Adjust the tab placement for different files */
 .file:nth-child(3n + 1)::before {
-    left: -1%;
-    width: 12%;
+    left: 10%;
+    max-width: 12%;
 }
 
 .file:nth-child(3n + 2)::before {
-    left: 16%;
-    width: 12%;
+    left: 78%;
+    max-width: 12%;
 }
 
 .file:nth-child(3n + 3)::before {
-    right: -1%;
-    left: auto;
-    width: 12%;
+    left: 0%;    
+    max-width: 12%;
 }
 
 /* File date on the tab */
 .file-date {
     position: absolute;
-    top: -22%;
+    top: 0;
+    left: 50%;
     font-size: 1.4rem;
-    color: #000;
     text-align: center;
-    z-index: 0;
+    white-space: normal;
+    /* allow wrapping */
+    max-width: 100%;
+    /* limit width inside tab */
+    line-height: -1rem;
+    transform: translate(0%, -100%);
+}
+
+@media (max-width: 500px) {
+    .file-date {
+        font-size: 1rem;
+        max-width: 60%;
+    }
 }
 
 /* Adjusts the placement of the dates to match the tabs */
 .file:nth-child(3n + 1) .file-date {
-    left: 1%;
-    width: 20%;
+    left: 12%;
+    max-width: 15%;
 }
 
 .file:nth-child(3n + 2) .file-date {
-    left: 17.5%;
-    width: 20%;
+    left: 80%;
+    max-width: 18%;
 }
 
 .file:nth-child(3n + 3) .file-date {
-    right: 3%;
-    left: auto;
-    width: 20%;
+    left: 2%;
+    max-width: 15%;
 }
 
 /* Left-side image area on each file */

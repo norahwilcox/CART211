@@ -119,8 +119,8 @@ handle.addEventListener('click', e => {
     });
 
     // Moves drawer up and increase height
-    drawerFront.style.transition = 'transform 0.5s ease, height 0.11s ease'; // length of transition
-    drawerFront.style.transform = 'translateY(-70%)';
+    drawerFront.style.transition = 'transform 0.5s ease, height 0.18s ease'; // length of transition
+    drawerFront.style.transform = 'translateY(-58%)';
     drawerFront.style.height = '55vh'; // increases height of drawer when closed
 
     stacked = true;
@@ -136,7 +136,7 @@ handle.addEventListener('click', e => {
     });
 
     // Move drawer back down and restores original height
-    drawerFront.style.transition = 'transform 0.3s ease, height 0.7s ease';
+    drawerFront.style.transition = 'transform 0.4s ease, height 0.1s ease';
     drawerFront.style.transform = 'translateY(0)';
     drawerFront.style.height = '46vh';
 
