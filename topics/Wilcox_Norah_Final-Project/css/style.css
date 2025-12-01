@@ -135,7 +135,7 @@ body {
 .file::before {
     content: '';
     position: absolute;
-    top: -25.6%;
+    top: -25.3%;
     left: 10%;
     width: 10%;
     height: -1%;
