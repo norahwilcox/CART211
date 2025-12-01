@@ -238,7 +238,7 @@ body {
     }
 
     .cabinet.shakey-border {
-        border-width: 2rem;
+        border-width: 2.5rem;
     }
 
     /* Drawer front */
@@ -250,7 +250,7 @@ body {
     }
 
     .drawer-front.shakey-border {
-        border-width: 2rem;
+        border-width: 2.5rem;
     }
 
     /* Drawer title */
@@ -272,29 +272,32 @@ body {
 
     /* Files container */
         .files {
-            bottom: 5vh;
             width: 85vw;
             max-width: 85vw;
-            max-height: 70vh;
+            max-height: 10vh;
         }
 
     /* File main container */
         .file {
-            bottom: 0;
+            bottom: 77vh;
             height: 40vh;
             width: 85vw;
             max-width: 85vw;
         }
 
     .file.shakey-border {
-        border-width: 2rem;
+        border-width: 2.5rem;
+    }
+
+    .file:not(:last-child) {
+        margin-top: 9.5vh;
     }
 
     /* Tabs */
     .file::before {
         width: 10%;
         max-width: 10%;
-        transform: translateY(-150%);
+        transform: translateY(-210%);
         border-width: 2rem;
     }
 
@@ -304,7 +307,6 @@ body {
 
     .file:nth-child(3n + 2)::before {
         left: 75%;
-        transform: translateX(-50%) translateY(-150%);
     }
 
     .file:nth-child(3n + 3)::before {
@@ -315,22 +317,24 @@ body {
     .file-date {
         font-size: 0.9rem;
         max-width: 50%;
-        line-height: 1.2rem;
-        transform: translate(-50%, -120%);
+        line-height: 1rem;
+        transform: translate(-40%, -300%);
+        white-space: wrap;
+
     }
 
     .file:nth-child(3n + 1) .file-date {
-        left: 12%;
+        left: 21%;
         max-width: 50%;
     }
 
     .file:nth-child(3n + 2) .file-date {
-        left: 50%;
+        left: 85%;
         max-width: 50%;
     }
 
     .file:nth-child(3n + 3) .file-date {
-        left: 12%;
+        left: 10%;
         max-width: 50%;
     }
 
